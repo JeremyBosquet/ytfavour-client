@@ -1,0 +1,108 @@
+h3 {
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+p {
+    color: var(--text-primary);
+}
+
+.add_videos {
+    text-align: center;
+    margin-top: 100px;
+}
+.add_video {
+    width: 250px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.add_video input, select {
+    background-color: var(--background);
+    color: var(--text-primary);
+    outline: none;
+    height: 30px;
+    border: 1px solid var(--accent);
+    border-radius: 20px;
+    padding: 2px 8px;
+    margin-bottom: 10px;
+}
+
+.add_video button {
+    outline: none;
+    height: 30px;
+    border: 1px solid var(--accent);
+    border-radius: 20px;
+    background-color: var(--background);
+    color:var(--accent);
+    transition-duration: 0.2s;
+
+}
+
+.add_video button:hover, .add_video button:active {
+    background-color: var(--accent);
+    color: white;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.video {
+    width: 350px;
+    height: 220px;
+    border: none;
+    border-radius: 5px;
+}
+
+.videos {
+    width: 100%;
+    align-items: left;
+    justify-items: center;
+    display: grid;
+    margin: 100px 0;
+    grid-template-columns: repeat(auto-fit,minmax(340px,1fr));
+    grid-gap: 60px;
+
+    transition-duration: .2s;
+}
+
+.videos div {
+    width: 350px;
+    height: auto;
+    text-align: left;
+}
+
+.video_desc {
+    margin: 3px;
+    color:rgb(109, 109, 109);
+}
+.video_title {
+    margin: 3px;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.video_other {
+    margin-top: 25%;
+}
+
+@media (max-width: 360px) {
+    .videos div {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        width: 300px;
+    }
+
+    .video {
+        width: 90%;
+        height: auto;
+    }
+
+    .video_title {
+        width: 90%;
+    }
+
+}

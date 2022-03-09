@@ -1,0 +1,25 @@
+:root {
+    --background: white;
+    --background2: white;
+    --text-primary: black;
+    --text-secondary: royalblue;
+    --accent: rgb(219, 66, 66);
+  }
+  
+[data-theme='dark'] {
+    --background: rgb(0, 0, 0);
+    --background2: #0c0c0c;
+    --text-primary: white;
+    --text-secondary: grey;
+    --accent: rgb(219, 66, 66);
+    transition-duration: 0.1s;
+}
+
+div .page {
+  position: absolute;
+  width: 100%;
+  height: max-content;
+  background-color: var(--background);
+  min-height: 100%;
+  height: auto !important;
+}

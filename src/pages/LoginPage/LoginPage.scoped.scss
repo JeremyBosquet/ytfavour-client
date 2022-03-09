@@ -1,0 +1,145 @@
+$firstColor: rgb(219, 66, 66);
+
+/* ----------------------------------------------------------------------------------------------- */
+/*                                            Sign in / Sign up                                    */
+/* ----------------------------------------------------------------------------------------------- */
+
+.info-success {
+    padding: 10px;
+    margin: -15px 5px;
+    border-radius: 10px;
+    background-color:rgb(102, 224, 54);
+    border-bottom: 1px solid
+}
+
+.info-error {
+    padding: 10px;
+    margin: -5px 5px;
+    border-radius: 10px;
+    background-color:rgb(224, 54, 54);
+    border-bottom: 1px solid
+}
+/* Login form */
+.loginPage {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-top: 150px;
+
+    .row {
+        display: flex;
+    }
+}
+
+.sign-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+
+    a, span {
+        color: $firstColor;
+        text-decoration: none;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .sign-content {
+        height: 330px;
+        background-color: var(--background2);
+        -webkit-box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.2); 
+        box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.2);  
+        border-radius: 10px;
+        align-items: center;
+        padding: 40px;
+        position: static;
+
+
+        h2 {
+            margin-bottom: 30px;
+            color: var(--text-primary)
+        }
+        
+        form {
+            width: 460px;
+            display: flex;
+            flex-direction: column;
+        
+            input {
+                height: 20px;
+                padding: 15px;
+                outline: none;
+                background-color: var(--background);
+                color: var(--text-primary);
+                border: 1px solid rgb(199, 199, 199);
+                border-radius: 10px;
+                margin: 10px;
+                transition-duration: 0.2s;
+            }
+
+            input:focus {
+                border: 1px solid $firstColor;
+            }
+
+            .login-btn {
+                height: 50px;
+                background-color: $firstColor;
+                color: white;
+                font-size: 16px;
+                border: 0px;
+            }
+
+            .login-btn:hover {
+                background-color: rgb(197, 22, 63);
+                cursor: pointer;
+            }
+
+            .password {
+                display: flex;
+                align-items: center;
+                justify-content: row;
+
+                :nth-child(1){
+                    width: 100%;
+                }
+                :nth-child(2) {
+                    margin-right: 15px;
+                }
+            }
+
+            .view-password {
+                left: 430px;
+                bottom: 192px;
+            }
+
+        }
+    }
+    
+}
+
+@media screen and (max-width: 1150px) {
+    .loginPage {
+        flex-direction: column;
+        width: auto;
+        position: static;
+        top: 0;
+        right: 0;
+        margin: 150px;
+
+        .row {
+            flex-direction: column;
+        }
+    }
+    .sign-container {
+        .sign-content {
+            padding: 20px;
+            height: 350px;
+
+            form {
+                width: 300px;
+            }
+        }
+    }
+}

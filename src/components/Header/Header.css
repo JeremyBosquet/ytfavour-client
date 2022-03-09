@@ -1,0 +1,62 @@
+@font-face {
+	font-family: "Gilroy";
+	src: url("Gilroy.otf");
+}
+
+* {
+	font-family: "Gilroy";
+}
+
+h1 {
+	font-size: 64px;
+	text-align: center;
+	color: rgb(219, 66, 66);
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.header {
+    position: absolute;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+}
+
+.header_link {
+    padding: 10px;
+    border: 2px solid rgb(219, 66, 66);
+    border-radius: 5px;
+}
+
+.header_link:hover {
+    background-color: rgb(219, 66, 66);
+    color: white;
+    transition-duration: 0.2s;
+}
+
+footer p {
+	text-align: center;
+    margin: 20px;
+}
+
+footer {
+    position: relative;
+    right: 50%;
+    width: 100%;
+    transform: translate(50%, -50%);
+	bottom: 0;
+}
+
+@media (max-width: 1050px) {
+    footer {
+        margin-top: 30px;
+		position: relative;
+	}
+
+    footer p {
+        margin: 0px;
+    }
+}

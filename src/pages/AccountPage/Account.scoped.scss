@@ -1,0 +1,203 @@
+$firstColor: rgb(219, 66, 66);
+
+.accountPage {
+    background-color: var(--background);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    caption {
+        color: var(--text-primary);
+    }
+
+    .a-page {
+        display: flex;
+        flex-direction: row;
+
+        .content-page {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100% !important;
+
+            .content {
+                background-color: var(--background);
+                border-top: 3px solid $firstColor;
+                padding: 20px;
+                margin: 20px;
+                border-radius: 15px;
+                -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.1); 
+                box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.1);  
+                animation: displayAnim .3s both;
+            }
+
+            @keyframes displayAnim {
+                0% {
+                    opacity: 0;
+                    transform: translateX(-200px);
+                }
+                100% {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+
+            
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+
+        .a-page {
+            flex-direction: column;
+        }
+
+    }
+
+    /* ----------------------------------------------------------------------------------------------- */
+    /*                                             Component Header                                    */
+    /* ----------------------------------------------------------------------------------------------- */
+
+    .accountHeader {
+        min-height: 100vh;
+        width: 250px;
+        position: static;
+        transform: translate(0, 0);
+        background-color: rgb(44, 54, 63);
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        transition-duration: 0.2s;
+        z-index: 9999;
+
+        h2 {
+            width: fit-content;
+            font-size: 24px;
+            color: white;
+            font-weight: 200;
+            margin: 20px auto;
+        }
+
+        .header-elements {
+            display: flex;
+            flex-direction: column;
+
+            .header-element {
+                width: auto;
+                font-size: 16px;
+                text-decoration: none;
+                color: white;
+                padding: 20px;
+            }
+
+            .header-element:hover {
+                background-color:rgba(255, 255, 255, 0.116);
+                cursor: pointer;
+            }
+
+            .active {
+                background-color:rgba(255, 255, 255, 0.116);
+                border-left: 4px solid $firstColor;
+                transition-duration: 0.1s;
+            }
+        }
+
+        span {
+            text-decoration: none;
+            color: rgb(241, 54, 54);
+        }
+
+    }
+
+    @media screen and (max-width: 768px) {
+
+        .content-page {
+            margin-top: 70px;
+        }
+ 
+        .accountHeader {
+            min-height: fit-content;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 70px    ;
+            overflow: hidden;
+            
+            .burger, .burger::before, .burger::after {
+                width: 30px;
+                height: 5px;
+                background-color:white;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                transition-duration: 0.2s;
+            }
+
+            .burger::before {
+                content: "";
+                width: 30px;
+                height: 5px;
+                top: 12px;
+                left: 0;
+                background-color: white;
+            }
+            
+            .burger::after {
+                content: "";
+                width: 30px;
+                height: 5px;
+                top: 24px;
+                left: 0;
+                background-color: white;
+            }
+
+            .close, .close::before, .close::after {
+                width: 30px;
+                height: 5px;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                transition-duration: 0.2s;
+            }
+
+            .close::before {
+                content: "";
+                width: 5px;
+                height: 40px;
+                top: -5PX;
+                left: 13px;
+                background-color: rgb(255, 255, 255);
+                transform: rotate(-45deg);
+            }
+
+            .close::after {
+                content: "";
+                width: 40px;
+                height: 5px;
+                top: 12PX;
+                left: -5PX;
+                background-color: rgb(255, 255, 255);
+                transform: rotate(-45deg);
+            }
+        }
+
+
+        .header-logout {
+            right: 50%;
+        }
+    }
+}
+
+.user_del {
+    border: none;
+    padding: 10px;
+    background-color: $firstColor;
+    color: white;
+    transition-duration: 0.1s;
+}
+.user_del:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}

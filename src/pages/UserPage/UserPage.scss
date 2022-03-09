@@ -1,0 +1,81 @@
+$firstColor: rgb(219, 66, 66);
+
+.userPage {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        font-size: 24px;
+        max-width: 720px;
+    }
+
+    h2 {
+        color: var(--text-primary);
+    }
+
+    .videoInPage {
+        width: 720px;
+        height: 360px;
+        border-radius: 15px;
+    }
+    div {
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .content {
+        display: flex;
+        width: auto;
+        background-color: var(--background);
+        border-top: 3px solid $firstColor;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 15px;
+        -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.15); 
+        box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.15);  
+        animation: displayAnim .3s both;
+    }
+
+    .displayAccount
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+    }
+    .userInfos 
+    {
+        justify-content: left;
+        align-items: left;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .userPage {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        .videoInPage{
+            max-width: 90%;
+            max-height: 240px;
+        }
+        h1 {
+            font-size: 20px;
+            width: 80%;
+        }
+
+        div{
+            margin: 5px;
+        }
+        .displayAccount
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+        }
+    }
+}

@@ -1,0 +1,34 @@
+.displayAccount {
+    display: flex;
+    flex-direction: row;
+
+    .account_video {
+        width: 240px;
+        height: 144px;
+        margin-right: 10px;
+    }
+    .video_del {
+        margin-top: 20px;
+        background-color: rgb(241, 54, 54);
+        border: none;
+        color: white;
+        width: 120px;
+        height: 30px;
+        border-radius: 10px; 
+        transition-duration: 0.1s;
+    }
+    .video_del:hover {
+        transform: scale(1.06);
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .displayAccount {
+        flex-direction: column;
+
+        .video_del {
+            margin: 10px 0;
+        }
+    }
+}
